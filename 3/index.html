@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos/output.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="bg-slate-100">
+    <div class="container p-4">
+        
+        <button onclick="myFunction()">Clickeame</button>
+
+        <div id="myDIV" style="border:1px solid black;">
+        Este elemento aparece y desaparece con el botón
+        </div>
+    </div>
+    <div class="container p-4" id="login">
+        <div class="w-4/12 mx-auto m-4 p-4 shadow-2xl bg-gray-50">
+            <h1 class="m-4 text-center text-blue-700 text-2xl font-bold uppercase">Login</h1>
+            <div class="input box">
+                <input type="text" name="username" id="username" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Usuario</label>
+            </div>
+            <div class="input box">
+                <input type="text" name="password" id="password" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Password</label>
+            </div>
+            <button class="bg-blue-900 hover:bg-gray-50 text-gray-50 hover:text-blue-900 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-blue-900 hover:shadow-md hover:shadow-blue-800">Iniciar</button>
+        </div>
+    </div>
+    <div class="container p-4 hidden" id="register">
+        <div class="w-4/12 mx-auto m-4 p-4 shadow-2xl bg-gray-50">
+            <h1 class="m-4 text-center text-blue-700 text-2xl font-bold uppercase">Register</h1>
+            <div class="input box">
+                <input type="text" name="username" id="username" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Usuario</label>
+            </div>
+            <div class="input box">
+                <input type="text" name="password" id="password" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Password</label>
+            </div>
+            <div class="input box">
+                <input type="text" name="nombre" id="nombre" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Nombre</label>
+            </div>
+            <div class="input box">
+                <input type="text" name="apellido" id="apellido" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Apellido</label>
+            </div>
+            <div class="input box">
+                <input type="email" name="correo" id="correo" required="required" class="bg-gray-50 text-blue-700">
+                <label class="text-blue-700">Correo</label>
+            </div>
+            <input type="checkbox" name="terminos" id="terminos" class="accent-blue-700">
+            <button class="bg-blue-900 hover:bg-gray-50 text-gray-50 hover:text-blue-900 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-blue-900 hover:shadow-md hover:shadow-blue-800">Registrar</button>
+        </div>
+    </div>
+
+<script>
+    function myFunction() {
+    var x = document.getElementById("register");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+</body>
+</html>
