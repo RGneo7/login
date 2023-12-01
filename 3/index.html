@@ -8,66 +8,88 @@
     <link rel="stylesheet" href="estilos/output.css">
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body class="bg-slate-100">
-    <div class="container p-4">
-        
-        <button onclick="myFunction()">Clickeame</button>
-
-        <div id="myDIV" style="border:1px solid black;">
-        Este elemento aparece y desaparece con el botón
+<body class="bg-gray-50">
+    <div class="container p-4 flex justify-center items-center">
+        <div>
+            <h1 class="m-4 text-center text-2xl font-bold uppercase" id="titulo_login">Login</h1>
+        </div>
+        <div>
+            <label class="switch">
+                <input type="checkbox" onclick="myFunction()">
+                <div class="slider round"></div>
+            </label>
+        </div>
+        <div>
+            <h1 class="m-4 text-center text-2xl font-bold uppercase" id="titulo_register">Register</h1>
         </div>
     </div>
     <div class="container p-4" id="login">
-        <div class="w-4/12 mx-auto m-4 p-4 shadow-2xl bg-gray-50">
-            <h1 class="m-4 text-center text-blue-700 text-2xl font-bold uppercase">Login</h1>
+        <div class="w-4/12 mx-auto m-4 p-4 shadow-xl shadow-blue-900 bg-blue-900">
+            <svg class="text-gray-50 m-4" xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
             <div class="input box">
-                <input type="text" name="username" id="username" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Usuario</label>
+                <input type="text" name="username" id="username" required="required" class="bg-blue-900 text-gray-50">
+                <label class="label text-gray-50">Usuario</label>
             </div>
             <div class="input box">
-                <input type="text" name="password" id="password" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Password</label>
+                <input type="text" name="password" id="password" required="required" class="bg-blue-900 text-gray-50">
+                <label class="label text-gray-50">Password</label>
             </div>
-            <button class="bg-blue-900 hover:bg-gray-50 text-gray-50 hover:text-blue-900 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-blue-900 hover:shadow-md hover:shadow-blue-800">Iniciar</button>
+            <button class="bg-gray-50 hover:bg-blue-900 text-blue-900 hover:text-gray-50 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-gray-50 hover:shadow-md hover:shadow-gray-50 w-full">Iniciar</button>
         </div>
     </div>
     <div class="container p-4 hidden" id="register">
-        <div class="w-4/12 mx-auto m-4 p-4 shadow-2xl bg-gray-50">
-            <h1 class="m-4 text-center text-blue-700 text-2xl font-bold uppercase">Register</h1>
+        <div class="w-4/12 mx-auto m-4 p-4 shadow-md shadow-gray-50 bg-gray-50">
             <div class="input box">
                 <input type="text" name="username" id="username" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Usuario</label>
+                <label class="label text-blue-700">Usuario</label>
             </div>
             <div class="input box">
                 <input type="text" name="password" id="password" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Password</label>
+                <label class="label text-blue-700">Password</label>
             </div>
             <div class="input box">
                 <input type="text" name="nombre" id="nombre" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Nombre</label>
+                <label class="label text-blue-700">Nombre</label>
             </div>
             <div class="input box">
                 <input type="text" name="apellido" id="apellido" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Apellido</label>
+                <label class="label text-blue-700">Apellido</label>
             </div>
             <div class="input box">
                 <input type="email" name="correo" id="correo" required="required" class="bg-gray-50 text-blue-700">
-                <label class="text-blue-700">Correo</label>
+                <label class="label text-blue-700">Correo</label>
             </div>
             <input type="checkbox" name="terminos" id="terminos" class="accent-blue-700">
-            <button class="bg-blue-900 hover:bg-gray-50 text-gray-50 hover:text-blue-900 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-blue-900 hover:shadow-md hover:shadow-blue-800">Registrar</button>
+            <button class="bg-blue-900 hover:bg-gray-50 text-gray-50 hover:text-blue-900 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-blue-900 hover:shadow-md hover:shadow-blue-800 w-full">Registrar</button>
         </div>
     </div>
 
 <script>
+    let l = document.getElementById("login");
+    let r = document.getElementById("register");
+    let tl = document.getElementById("titulo_login");
+    let tr = document.getElementById("titulo_register");
+    tl.style.color = "#1e3a8a";
+        tr.style.color = "#93c5fd";
     function myFunction() {
-    var x = document.getElementById("register");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
+        if (l.style.display === "none") {
+            //register
+            // #1e3a8a blue900
+            // #f9fafb gray
+            l.style.display = "block";
+            r.style.display = "none";
+            document.body.style.backgroundColor = "#f8fafc";
+            tl.style.color = "#1e3a8a";
+            tr.style.color = "#93c5fd";
+        } else {
+            //login
+            l.style.display = "none";
+            r.style.display = "block";
+            document.body.style.backgroundColor = "#1e3a8a";
+            tl.style.color = "#9ca3af";
+            tr.style.color = "#f9fafb";
+        }
     }
-}
 </script>
 </body>
 </html>
