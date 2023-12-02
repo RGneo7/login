@@ -1,0 +1,5 @@
+# Create a tailwind.config.js file
+./tailwindcss init
+
+# Start a watcher
+./tailwindcss -i input.css -o output.css --watch

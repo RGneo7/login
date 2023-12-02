@@ -2,6 +2,8 @@
 .box{
     position: relative;
 }
+
+  
   
 input{
     /* color: #120a5c; */
@@ -11,9 +13,12 @@ input{
     outline: none;
     border-bottom: 2px solid #1d4ed8;
     /* border-radius: 4px; */
-    width: 100%;
+    /* width: 100%; */
     padding: 10px;
     margin-bottom: 1.4em;
+}
+.input_login > input{
+  border-bottom: 2px solid #f9fafb;
 }
 
 .label{
