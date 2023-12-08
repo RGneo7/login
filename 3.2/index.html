@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO</title>
+    <link rel="stylesheet" href="estilos/output.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="fondo_login">
+    <div class="container min-h-screen mx-auto">
+        <div class="container py-2 flex justify-center items-center">
+            <div>
+                <h1 class="m-4 text-center text-2xl font-bold uppercase" id="titulo_login">Acceder</h1>
+            </div>
+            <div>
+                <label class="switch">
+                    <input type="checkbox" onclick="myFunction()">
+                    <div class="slider round"></div>
+                </label>
+            </div>
+            <div>
+                <h1 class="m-4 text-center text-2xl font-bold uppercase" id="titulo_register">Registro</h1>
+            </div>
+        </div>
+        <div class="container" id="login">
+            <div class="w-auto md:w-2/6 mx-auto m-4 p-4 shadow-xl shadow-blue-900/50 bg-blue-900">
+                <div class="border-4 border-gray-50 p-4">
+                    <p class="flex justify-center">
+                        <svg class="text-gray-50 m-4 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                    </p>
+                    <div class="input_login box">
+                        <input type="text" name="username" id="username" required="required" class="bg-blue-900 text-gray-50 w-full">
+                        <label class="label text-gray-50">Usuario</label>
+                    </div>
+                    <div class="input_login box">
+                        <input type="password" name="password" id="password" required="required" class="bg-blue-900 text-gray-50 w-full">
+                        <label class="label text-gray-50">Contraseña</label>
+                    </div>
+                    <button class="bg-gray-50 hover:bg-blue-900 text-blue-900 hover:text-gray-50 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-gray-50 hover:shadow-md hover:shadow-gray-50 w-full transition ease-in-out delay-150 duration-300">Iniciar</button>
+                </div>
+            </div>
+        </div>
+        <div class="container py-2 hidden" id="register">
+            <div class="container py-4">
+                <div class="w-full md:w-2/4 mx-auto m-4 p-4 shadow-xl shadow-gray-50/50 bg-gray-50">
+                    <div class="border-4 border-blue-900 p-4">
+                        <p class="flex justify-center">
+                            <svg class="text-blue-900 m-4 h-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                        </p>
+                        <div class="input box">
+                            <input type="text" name="nombre" id="nombre" required="required" class="bg-gray-50 text-blue-900 w-full">
+                            <label class="label text-blue-900">Nombre</label>
+                        </div>
+                        <div class="input box">
+                            <input type="text" name="apellido" id="apellido" required="required" class="bg-gray-50 text-blue-900 w-full">
+                            <label class="label text-blue-900">Apellido</label>
+                        </div>
+                        <div class="input box">
+                            <input type="email" name="correo" id="correo" required="required" class="bg-gray-50 text-blue-900 w-full">
+                            <label class="label text-blue-900">Correo</label>
+                        </div>
+                        <div class="input box">
+                            <input type="text" name="username" id="username" required="required" class="bg-gray-50 text-blue-900 w-full">
+                            <label class="label text-blue-900">Usuario</label>
+                        </div>
+                        <div class="input box">
+                            <input type="password" name="password" id="password" required="required" class="bg-gray-50 text-blue-900 w-full">
+                            <label class="label text-blue-900">Contraseña</label>
+                        </div>
+                        <div>
+                            <label class="text-blue-900 font-bold accent-blue-900">
+                                <input type="checkbox"> Estoy de acuerdo con los términos y condiciones.
+                            </label>
+                        </div>
+                        <button class="bg-blue-900 hover:bg-gray-50 text-gray-50 hover:text-blue-900 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-blue-900 hover:shadow-md hover:shadow-blue-800 w-full transition ease-in-out delay-150 duration-300">Registrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+        let l = document.getElementById("login");
+        let r = document.getElementById("register");
+        let tl = document.getElementById("titulo_login");
+        let tr = document.getElementById("titulo_register");
+            tl.style.color = "#1e3a8a";
+            tr.style.color = "#93c5fd";
+        function myFunction() {
+            if (l.style.display === "none") {
+                //register
+                l.style.display = "block";
+                r.style.display = "none";
+                tl.style.color = "#1e3a8a";
+                tr.style.color = "#93c5fd";
+                body.classList.replace('fondo_register', 'fondo_login');
+            } else {
+                //login
+                l.style.display = "none";
+                r.style.display = "block";
+                tl.style.color = "#9ca3af";
+                tr.style.color = "#f9fafb";
+                body.classList.replace('fondo_login', 'fondo_register');
+            }
+        }
+    </script>
+</body>
+</html>

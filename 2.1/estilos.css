@@ -39,3 +39,14 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@keyframes opacidad {
+  0%   { opacity: 0; }
+  25%   { opacity: 0.2; }
+  50%   { opacity: 0.5; }
+  75%   { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+.animacionForm {
+  animation: opacidad .5s linear;
+}
