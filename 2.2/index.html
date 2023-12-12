@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INICIO</title>
+    <link rel="stylesheet" href="tailwind/output.css">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body class="fondo">
+    <div class="grid grid-cols-1 gap-6 content-center my-8">
+        <div class="container mx-auto flex justify-center login">
+            <div class="min-w-max min-h-max hidden" id="accesologin">
+                <button onclick="login()" class="bg-gray-50 hover:text-gray-50 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-gray-50 hover:shadow-md hover:shadow-gray-50 w-full transition ease-in-out delay-100 duration-300">Iniciar</button>
+            </div>
+            <div class="min-w-max p-4 shadow-xl shadow-gray-500 block animacionForm fondoForm" id="formlogin">
+                <div class="flex flex-col justify-center">
+                    <svg class="h-16 text-gray-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/></svg>
+                </div>
+                <div class="text-gray-50 font-bold text-2xl uppercase pt-2 pb-4 text-center">Iniciar</div>
+                <div class="input box">
+                    <input type="text" name="username" id="username" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Usuario</label>
+                </div>
+                <div class="input box">
+                    <input type="password" name="password" id="password" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Contraseña</label>
+                </div>
+                <button class="bg-gray-50 hover:text-gray-50 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-gray-50 hover:shadow-md hover:shadow-gray-50 w-full transition ease-in-out delay-100 duration-300">Iniciar</button>
+            </div>
+        </div>
+        <div class="container mx-auto flex justify-center register">
+            <div class="min-w-max min-h-max block" id="accesoregister">
+                <button onclick="register()" class="bg-gray-50 hover:text-gray-50 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-gray-50 hover:shadow-md hover:shadow-gray-50 w-full transition ease-in-out delay-100 duration-300">Registrar</button>
+            </div>
+            <div class="md:min-w-max p-4 shadow-lg shadow-gray-500 transition-all hidden animacionForm fondoForm" id="formregister">
+                <div class="flex flex-col justify-center">
+                    <svg class="h-16 text-gray-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM504 312V248H440c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V136c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H552v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></svg>
+                </div>
+                <div class="text-gray-50 font-bold text-2xl uppercase py-2 text-center">Registrar</div>
+                <div class="input box">
+                    <input type="text" name="nombre" id="nombre" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Nombre</label>
+                </div>
+                <div class="input box">
+                    <input type="text" name="apellido" id="apellido" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Apellido</label>
+                </div>
+                <div class="input box">
+                    <input type="email" name="correo" id="correo" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Correo</label>
+                </div>
+                <div class="input box">
+                    <input type="text" name="username" id="username" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Usuario</label>
+                </div>
+                <div class="input box">
+                    <input type="password" name="password" id="password" required="required" class="text-gray-50 w-full">
+                    <label class="label text-gray-50">Contraseña</label>
+                </div>
+                <div>
+                    <label class="text-gray-50 font-bold accent-gray-50">
+                        <input type="checkbox"> Estoy de acuerdo con los términos y condiciones.
+                    </label>
+                </div>
+                <button class="bg-gray-50 hover:text-gray-50 py-2 px-4 uppercase hover:font-bold hover:border-2 hover:border-gray-50 hover:shadow-md hover:shadow-gray-50 w-full transition ease-in-out delay-100 duration-300">Registrar</button>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script>
+        const body = document.querySelector('body');
+        let al = document.getElementById("accesologin");
+        let l = document.getElementById("formlogin");
+        let ar = document.getElementById("accesoregister");
+        let r = document.getElementById("formregister");
+        function login() {
+            if (al.style.display === 'none') {
+                //register
+                al.style.display = 'block';
+                l.style.display = 'none';
+                ar.style.display = 'none';
+                r.style.display = 'block';
+                l.classList.replace('fondo1', 'fondo2');
+            } else {
+                //login
+                al.style.display = 'none';
+                l.style.display = 'block';
+                ar.style.display = 'block';
+                r.style.display = 'none';
+                r.classList.replace('fondo1', 'fondo2');
+            }
+        }
+
+        function register() {
+            if (ar.style.display === 'none') {
+                //register
+                al.style.display = 'none';
+                l.style.display = 'block';
+                ar.style.display = 'block';
+                r.style.display = 'none';
+                body.classList.replace('fondo', 'fondo');
+            } else {
+                //login
+                al.style.display = 'block';
+                l.style.display = 'none';
+                ar.style.display = 'none';
+                r.style.display = 'block';
+                body.classList.replace('fondo', 'fondo');
+            }
+        }
+    </script>
+</body>
+</html>
