@@ -1,0 +1,130 @@
+
+.box{
+    position: relative;
+}
+input{
+  font-size: 1em;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #f9fafb;
+  background-color: transparent;
+  padding: 10px;
+  margin-bottom: 1.4em;
+}
+.input_login > input{
+  border-bottom: 2px solid #f9fafb;
+}
+.label{
+  position: absolute !important;
+  left: 0 !important;
+  pointer-events: none !important;
+  padding: 7px !important;
+  transition: 0.5s !important;
+  font-weight: bold;
+}
+input:valid ~ .label,input:focus ~ .label{
+  letter-spacing: 2.5px !important;
+  transform: translateX(2px) translateY(-16px) !important;
+  padding: 0 2px !important;
+  text-transform: uppercase !important;
+  z-index: 3;
+  font-weight: normal;
+}
+
+#formlogin, #formregister{
+  transition: all 5s ease-in-out;
+}
+
+body{
+  background-image: url('fondo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes opacidad {
+  0%   { opacity: 0; }
+  25%   { opacity: 0.2; }
+  50%   { opacity: 0.5; }
+  75%   { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+.animacionForm {
+  animation: opacidad .5s linear;
+}
+.fondoForm {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+button:hover{
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
+
+
+
+
+/* Formateamos el label que servirá de contenedor */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+/* Ocultamos el checkbox html */
+.switch input {
+  display:none;
+}
+/* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #8a7361;
+  /* background-color: #624b45; */
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/* Pintamos la perilla de control o slider usando el selector before */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 4px;
+  bottom: 3px;
+  background-color: #f9fafb;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/* Cambiamos el color de fondo cuando el checkbox esta activado */
+input:checked + .slider {
+  border-width: 2px;
+  border-color: #8a7361;
+  border-style: solid;
+  background-color: #f9fafb !important;
+}
+input:checked + .slider:before {
+  background-color: #8a7361 !important;
+}
+/* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px) !important;
+  -ms-transform: translateX(24px) !important;
+  transform: translateX(24px) !important;
+}
+/* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
+.slider.round {
+  border-width: 2px;
+  border-color: #f9fafb;
+  border-style: solid;
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
